@@ -35,12 +35,11 @@ public class dashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         acc_fname = new javax.swing.JLabel();
-        acc_lname = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        acc_lname = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -70,19 +69,14 @@ public class dashboard extends javax.swing.JFrame {
         acc_fname.setText(" ADMIN");
         jPanel1.add(acc_fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 90, 30));
 
-        acc_lname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        acc_lname.setText(" ADMIN");
-        jPanel1.add(acc_lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 90, 30));
-
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 410));
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("ADMINDASHBOARD");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 163, 34));
+        jLabel1.setText("COMPUTER LAB EQUIPMENT");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 220, 34));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 540, 60));
 
@@ -100,11 +94,11 @@ public class dashboard extends javax.swing.JFrame {
         jPanel4.add(jLabel4);
         jLabel4.setBounds(20, 10, 50, 50);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText(" USERS");
-        jPanel4.add(jLabel5);
-        jLabel5.setBounds(20, 50, 50, 20);
+        acc_lname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_lname.setText(" ADMIN");
+        jPanel4.add(acc_lname);
+        acc_lname.setBounds(20, 50, 50, 20);
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, 80));
 
@@ -120,8 +114,8 @@ public class dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-       userLoginF us = new userLoginF();
-       us.setVisible(true);
+       adminDashboard ad = new adminDashboard();
+       ad.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jPanel4MouseClicked
 
@@ -178,7 +172,6 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;

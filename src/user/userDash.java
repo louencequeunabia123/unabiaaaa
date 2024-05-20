@@ -35,7 +35,6 @@ public class userDash extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         user_account = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        last_name = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -60,16 +59,16 @@ public class userDash extends javax.swing.JFrame {
         user_account.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         user_account.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         user_account.setText("USER");
-        jPanel1.add(user_account, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 80, 30));
+        user_account.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                user_accountMouseClicked(evt);
+            }
+        });
+        jPanel1.add(user_account, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 80, 30));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-users-96 (1).png"))); // NOI18N
         jLabel3.setText("jLabel3");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 90, 70));
-
-        last_name.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        last_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        last_name.setText("USER");
-        jPanel1.add(last_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 80, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 90, 70));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 140, 260));
 
@@ -100,9 +99,9 @@ public class userDash extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("USERS");
+        jLabel5.setText("STUDENTS");
         jPanel4.add(jLabel5);
-        jLabel5.setBounds(40, 80, 50, 20);
+        jLabel5.setBounds(10, 80, 80, 20);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-select-users-96.png"))); // NOI18N
@@ -121,15 +120,15 @@ public class userDash extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("ACCOUNT");
+        jLabel4.setText("TEACHERS");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(40, 80, 52, 14);
+        jLabel4.setBounds(30, 80, 60, 14);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-details-96.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-teachers-64.png"))); // NOI18N
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(20, 10, 90, 70);
+        jLabel6.setBounds(30, -20, 80, 130);
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 130, 100));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 130, 100));
 
         pack();
         setLocationRelativeTo(null);
@@ -143,8 +142,8 @@ public class userDash extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-       userLoginF us = new userLoginF();
-       us.setVisible(true);
+       studentDashboard sd = new studentDashboard();
+       sd.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jPanel4MouseClicked
 
@@ -168,6 +167,12 @@ public class userDash extends javax.swing.JFrame {
         acc.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void user_accountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_accountMouseClicked
+        userLoginF us = new userLoginF();
+       us.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_user_accountMouseClicked
 
     /**
      * @param args the command line arguments
@@ -217,7 +222,6 @@ public class userDash extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    public javax.swing.JLabel last_name;
     public javax.swing.JLabel user_account;
     // End of variables declaration//GEN-END:variables
 }
